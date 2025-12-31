@@ -1,6 +1,6 @@
-// Problem 1 Solution
+/* Problem One Solution/
 
-//c=delcared A type
+//delcared A type
 type DataType = string | number | boolean;
 
 //function
@@ -17,6 +17,30 @@ function formatValue(param:DataType){
     }
 }
 
-console.log(formatValue('hello'));
-console.log(formatValue(5));
-console.log(formatValue(true));
+// console.log(formatValue('hello'));
+// console.log(formatValue(5));
+// console.log(formatValue(true));
+
+
+
+
+/* Problem Two Solution*/
+
+//define type
+type stringOrArray = string | any[];
+
+// give type to function
+function getLength(value:stringOrArray):number{
+    if (typeof value === 'string'){
+        return value.length
+    }
+    if(Array.isArray(value)){
+        return value.length
+    }
+
+    return 0
+}
+
+
+// console.log(getLength("typescript"));
+// console.log(getLength([10, 20, 30, 40]));
