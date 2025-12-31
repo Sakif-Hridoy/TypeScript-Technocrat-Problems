@@ -1,4 +1,4 @@
-/* Problem One Solution/
+/* Problem One Solution */
 
 //delcared A type
 type DataType = string | number | boolean;
@@ -95,3 +95,63 @@ const books = [
 ];
 
 // console.log(filterByRating(books));
+
+
+
+
+/* Problem Five Solution */
+
+// type
+
+type User = {
+
+    id:number;
+    name:string;
+    email:string;
+    isActive:boolean;
+
+}
+
+// function
+function filterActiveUsers(users: User[]):User[]{
+    return users.filter(user=>user.isActive === true)
+}
+
+
+const users = [
+  { id: 1, name: 'Rakib', email: 'rakib@example.com', isActive: true },
+  { id: 2, name: 'Asha', email: 'asha@example.com', isActive: false },
+  { id: 3, name: 'Rumi', email: 'rumi@example.com', isActive: true },
+];
+
+// console.log(filterActiveUsers(users));
+
+
+
+
+/* Problem Six Solution */
+
+// interface
+interface Book{
+    title:string
+    author:string
+    publishedYear:number
+    isAvailable:boolean
+}
+
+// function
+function printBookDetails(book:Book): void{
+    const availability = book.isAvailable ? "Yes" : "No"
+
+    console.log(`Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${availability}`)
+}
+
+// Sample Input
+const myBook: Book = {
+  title: 'The Great Gatsby',
+  author: 'F. Scott Fitzgerald',
+  publishedYear: 1925,
+  isAvailable: true,
+};
+
+printBookDetails(myBook);
