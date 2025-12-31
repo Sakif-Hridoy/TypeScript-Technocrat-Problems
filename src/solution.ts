@@ -44,6 +44,8 @@ function getLength(value: stringOrArray): number {
 // console.log(getLength("typescript"));
 // console.log(getLength([10, 20, 30, 40]));
 
+
+
 /* Problem Three Solution */
 
 // define class
@@ -68,3 +70,28 @@ class Person {
 
 // const person2 = new Person('Alice', 25);
 // console.log(person2.getDetails());
+
+
+
+
+
+/* Problem Four Solution */
+
+// type
+type item = {
+    title:string;
+    rating:number
+}
+
+// function
+function filterByRating(items:item[]):item[]{
+    return items.filter(item=> item.rating>= 4)
+}
+
+const books = [
+  { title: 'Book A', rating: 4.5 },
+  { title: 'Book B', rating: 3.2 },
+  { title: 'Book C', rating: 5.0 },
+];
+
+// console.log(filterByRating(books));
