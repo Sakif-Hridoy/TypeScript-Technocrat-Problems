@@ -1,0 +1,25 @@
+{
+  "name": "typescript-technocraft-problems",
+  "version": "1.0.0",
+  "description": "TypeScript-এ `interface` এবং `type`—দুটোই ব্যবহার করা হয় ডেটার structure বা shape নির্ধারণ করার জন্য। দেখতে একই রকম মনে হলেও এদের ব্যবহারিক দিক থেকে কিছু মৌলিক পার্থক্য রয়েছে।",
+  "main": "index.js",
+  "dependencies": {
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sakif-Hridoy/TypeScript-Technocrat-Problems.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Sakif-Hridoy/TypeScript-Technocrat-Problems/issues"
+  },
+  "homepage": "https://github.com/Sakif-Hridoy/TypeScript-Technocrat-Problems#readme"
+}
