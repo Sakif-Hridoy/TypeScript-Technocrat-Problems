@@ -1,6 +1,6 @@
 # 📘TypeScript-Technocrat Blog
 
-# 📘 Understanding Core TypeScript Concepts (Blog) -- written by Sakif with the help of AI to make designs and formats
+# 📘 Understanding Core TypeScript Concepts (Blog Post) -- written by Sakif with the help of AI to make designs and formats
 
 
 ## 1️⃣ Differences Between `interface` and `type` in TypeScript
