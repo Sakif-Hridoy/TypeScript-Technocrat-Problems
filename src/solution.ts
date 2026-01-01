@@ -88,11 +88,11 @@ function filterByRating(items:item[]):item[]{
     return items.filter(item=> item.rating>= 4)
 }
 
-const books = [
-  { title: 'Book A', rating: 4.5 },
-  { title: 'Book B', rating: 3.2 },
-  { title: 'Book C', rating: 5.0 },
-];
+// const books = [
+//   { title: 'Book A', rating: 4.5 },
+//   { title: 'Book B', rating: 3.2 },
+//   { title: 'Book C', rating: 5.0 },
+// ];
 
 // console.log(filterByRating(books));
 
@@ -118,11 +118,11 @@ function filterActiveUsers(users: User[]):User[]{
 }
 
 
-const users = [
-  { id: 1, name: 'Rakib', email: 'rakib@example.com', isActive: true },
-  { id: 2, name: 'Asha', email: 'asha@example.com', isActive: false },
-  { id: 3, name: 'Rumi', email: 'rumi@example.com', isActive: true },
-];
+// const users = [
+//   { id: 1, name: 'Rakib', email: 'rakib@example.com', isActive: true },
+//   { id: 2, name: 'Asha', email: 'asha@example.com', isActive: false },
+//   { id: 3, name: 'Rumi', email: 'rumi@example.com', isActive: true },
+// ];
 
 // console.log(filterActiveUsers(users));
 
@@ -147,14 +147,18 @@ function printBookDetails(book:Book): void{
 }
 
 // Sample Input
-const myBook: Book = {
-  title: 'The Great Gatsby',
-  author: 'F. Scott Fitzgerald',
-  publishedYear: 1925,
-  isAvailable: true,
-};
+// const myBook: Book = {
+//   title: 'The Great Gatsby',
+//   author: 'F. Scott Fitzgerald',
+//   publishedYear: 1925,
+//   isAvailable: true,
+// };
 
-printBookDetails(myBook);
+// printBookDetails(myBook);
+
+
+
+
 
 
 /* Problem Seven Solution */
@@ -207,3 +211,44 @@ function getUniqueValues(arr1: Value[], arr2: Value[]): Value[] {
 // const array1 = [1, 2, 3, 4, 5];
 // const array2 = [3, 4, 5, 6, 7];
 // console.log(getUniqueValues(array1, array2));
+
+
+
+
+/* Problem Eight Solution */
+
+// type
+type Product = {
+  name: string;
+  price: number;
+  quantity: number;
+  discount?: number;
+};
+
+function calculateTotalPrice(products: Product[]): number {
+  if (products.length === 0) {
+    return 0;
+  }
+
+  return products
+    .map(product => {
+      const basePrice = product.price * product.quantity;
+
+      if (product.discount !== undefined) {
+        const discountAmount = (basePrice * product.discount) / 100;
+        return basePrice - discountAmount;
+      }
+
+      return basePrice;
+    })
+    .reduce((total, current) => total + current, 0);
+}
+
+// sample input
+// const products = [
+//   { name: 'Pen', price: 10, quantity: 2 },
+//   { name: 'Notebook', price: 25, quantity: 3, discount: 10 },
+//   { name: 'Bag', price: 50, quantity: 1, discount: 20 },
+// ];
+
+// console.log(calculateTotalPrice(products));
