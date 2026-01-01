@@ -1,4 +1,4 @@
-# 📘TypeScript-Technocrat Blogs & Problem Solution 
+# 📘TypeScript-Technocrat Blog
 
 # 📘 Understanding Core TypeScript Concepts (Blog) -- written by Sakif with the help of AI to make designs and formats
 
