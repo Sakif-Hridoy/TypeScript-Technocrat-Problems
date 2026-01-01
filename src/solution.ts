@@ -155,3 +155,55 @@ const myBook: Book = {
 };
 
 printBookDetails(myBook);
+
+
+/* Problem Seven Solution */
+
+//type 
+type Value = string | number;
+
+//function
+function getUniqueValues(arr1: Value[], arr2: Value[]): Value[] {
+  // result array
+  const result: Value[] = [];
+
+  for (let i = 0; i < arr1.length; i++) {
+    const current = arr1[i];
+    let exists = false;
+
+    if (current !== undefined) {
+      for (let j = 0; j < result.length; j++) {
+        if (current === result[j]) {
+          exists = true;
+        }
+      }
+
+      if (!exists) {
+        result.push(current);
+      }
+    }
+  }
+
+  for (let i = 0; i < arr2.length; i++) {
+    const current = arr2[i];
+    let exists = false;
+
+    if (current !== undefined) {
+      for (let j = 0; j < result.length; j++) {
+        if (current === result[j]) {
+          exists = true;
+        }
+      }
+
+      if (!exists) {
+        result.push(current);
+      }
+    }
+  }
+
+  return result;
+}
+
+// const array1 = [1, 2, 3, 4, 5];
+// const array2 = [3, 4, 5, 6, 7];
+// console.log(getUniqueValues(array1, array2));
